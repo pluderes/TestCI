@@ -42,6 +42,7 @@ let inp = document.getElementById(`input`);
 let btnRandom = document.getElementById(`btnRandom`);
 let time = 2;
 let trueNumber = Math.floor(Math.random() * 10) + 1;
+
 btnRandom.onclick = function () {
   if (!inp.value) {
     alert("Bạn chưa nhập số dự đoán!");
@@ -52,7 +53,7 @@ btnRandom.onclick = function () {
       );
     } else if (time >= 0) {
       if (time === 0) {
-        alert(`Bạn đoán sai rồi. Bạn đã hết lượt dự đoán!`);
+        alert(`Bạn đoán sai rồi. Bạn đã hết lượt dự đoán. Kết quả đúng là: ${trueNumber}.`);
         btnRandom.disabled = "true";
       } else {
         time--;
